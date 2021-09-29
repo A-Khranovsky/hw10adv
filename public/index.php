@@ -7,10 +7,12 @@ use \Hillel\Models\Category;
 use \Hillel\Models\Post;
 use \Hillel\Models\Tag;
 
-$categoryHtml = new Category();
-$categoryHtml->title = 'HTML';
-$categoryHtml->slug = 'HTML-html';
-$categoryHtml->save();
+$data = [
+    'title' => 'HTML1',
+    'slug' => 'HTML-html'
+];
+
+$categoryHtml = Category::create($data);
 
 $categoryPhp = new Category();
 $categoryPhp->title = 'PHP';
