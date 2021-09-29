@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tag extends Model
 {
-    //protected $table = 'tags';
-
     public function posts()
     {
         return $this->belongsToMany(Post::class);
