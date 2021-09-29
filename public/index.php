@@ -126,7 +126,7 @@ $postDo->body = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 $postDo->category_id = 2;
 $postDo->save();
 
-$postDo = Post::find(11);
+$postDo = Post::find(9);
 
 if ($postDo) {
     $postDo->title = 'Done';
@@ -137,7 +137,7 @@ if ($postDo) {
     $postDo->save();
 }
 
-$postDo = Post::find(11);
+$postDo = Post::find(9);
 
 if ($postDo) {
     $postDo->delete();
