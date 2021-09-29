@@ -193,11 +193,6 @@ $tagUt->title = 'Ut';
 $tagUt->slug = 'Ut-ut';
 $tagUt->save();
 
-$posts = Post::all();
-foreach ($posts as $post) {
-    $post->post_tag()->sync();
-}
-
 $postsAll = Post::all();
 foreach ($postsAll as $post) {
     $postsRnd = Post::inRandomOrder()->limit(3)->get();
