@@ -7,32 +7,19 @@ use \Hillel\Models\Category;
 use \Hillel\Models\Post;
 use \Hillel\Models\Tag;
 
-$data = [
-    'title' => 'HTML1',
-    'slug' => 'HTML-html'
-];
+for ($i = 0; $i < 5; $i++) {
+    $categories [] =
+        [
+            'title' => 'Title' . $i,
+            'slug' => 'Slug' . $i
+        ];
+}
+
+$category = Category::insert($categories);
+
 
 $categoryHtml = Category::create($data);
 
-$categoryPhp = new Category();
-$categoryPhp->title = 'PHP';
-$categoryPhp->slug = 'PHP-php';
-$categoryPhp->save();
-
-$categoryJs = new Category();
-$categoryJs->title = 'JS';
-$categoryJs->slug = 'JavaScript-Javascript';
-$categoryJs->save();
-
-$categoryMysql = new Category();
-$categoryMysql->title = 'MySQL';
-$categoryMysql->slug = 'MySQL-Mysql';
-$categoryMysql->save();
-
-$categoryMongodb = new Category();
-$categoryMongodb->title = 'MongoDB';
-$categoryMongodb->slug = 'MongoDB-Mongodb';
-$categoryMongodb->save();
 
 $category = Category::find(5);
 
